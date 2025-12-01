@@ -1,11 +1,9 @@
-import logo from './logo.svg';
-
-import { Container } from 'react-bootstrap';
-
+import React from 'react';
 import HomeScreen from './screens/HomeScreen';
+import ProductScreeen from './screens/ProductScreen';
 import Header from './components/Header';
 import Footer from './components/Footer';
-
+import { Container } from 'react-bootstrap';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
@@ -16,6 +14,7 @@ function App() {
         <Container>
           <Routes>
             <Route path='/' element={<HomeScreen />} exact />
+            <Route path='/product/:id' element={<ProductScreeen />} />
           </Routes>
         </Container>
       </main>
